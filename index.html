@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>강나원 소개 페이지</title>
+  <style>
+    :root{
+      --navy: #1a2a5c;      /* 남색 계열 */
+      --navy-dark: #0f1a3a; /* 조금 더 진한 남색 */
+      --bg: #f7fbf8;         /* 밝은 본문 배경 */
+      --white: #ffffff;
+      --text: #333333;
+      --accent: #4a90e2;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header Section */
+    header {
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p.subtitle {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    header p.intro {
+      font-size: 1.0rem;
+      max-width: 600px;
+      margin: 20px auto 0;
+      font-weight: 300;
+      word-break: keep-all;
+    }
+
+    /* Main Content Section */
+    main {
+      max-width: 800px;
+      margin: -30px auto 50px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 1.4rem;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    h2 span {
+      margin-right: 10px;
+    }
+
+    /* Info Lists */
+    .info-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .label {
+      font-weight: 700;
+      width: 100px;
+      color: var(--navy-dark);
+    }
+
+    .value {
+      flex: 1;
+    }
+
+    .tag-container {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #eef2f7;
+      color: var(--navy);
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .like-item {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Goal Section */
+    .goal-summary {
+      background: #f0f4f8;
+      padding: 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: var(--navy-dark);
+      margin-bottom: 20px;
+      word-break: keep-all;
+    }
+
+    .goal-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .goal-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .goal-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .card { padding: 25px; }
+      .label { width: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>강나원</h1>
+    <p class="subtitle">나를 소개합니다</p>
+    <p class="intro">도전하고 배우는 과정에서 얻은 인사이트를 바탕으로,<br>사람 중심의 비즈니스 관점을 중시합니다.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <!-- Profile Section -->
+      <section>
+        <h2><span>👤</span> 프로필</h2>
+        <div class="info-group">
+          <div class="info-item">
+            <span class="label">소속</span>
+            <span class="value">경영학과 3학년</span>
+          </div>
+          <div class="info-item">
+            <span class="label">관심 분야</span>
+            <div class="value tag-container">
+              <span class="tag">유통</span>
+              <span class="tag">마케팅</span>
+              <span class="tag">인사</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="label">좋아하는 것</span>
+            <div class="value">
+              <span class="like-item">산책 🚶</span>
+              <span class="like-item">여행 ✈️</span>
+              <span class="like-item">음악감상 🎶</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strength Section (새로 추가된 나만의 강점 3가지) -->
+      <section>
+        <h2><span>💡</span> 나만의 강점</h2>
+        <ul class="goal-list">
+          <li><strong>성실성과 기록:</strong> 배운 내용과 중요한 정보들을 꼼꼼하게 정리하고 메모하며 꾸준히 기록하는 습관을 가지고 있습니다.</li>
+          <li><strong>경청과 협업:</strong> 팀 프로젝트 시 상대방의 의견을 잘 경청하고 세심하게 소통하며 든든한 조력자 역할을 합니다.</li>
+          <li><strong>배움에 대한 열정:</strong> 주도적으로 새로운 영역에 도전하고 모르는 부분을 스스로 찾아 익히며 성장해 나갑니다.</li>
+        </ul>
+      </section>
+
+      <!-- Goal Section -->
+      <section>
+        <h2><span>🎯</span> 목표 및 포부</h2>
+        <div class="goal-summary">
+          다양한 경험 속에서 균형을 잃지 않으며,<br>각 상황에 맞는 주관적 시선을 키우는 것을 목표로 합니다.
+        </div>
+        <ul class="goal-list">
+          <li>다양한 인턴십과 프로젝트로 실무 감각 습득</li>
+          <li>팀워크와 리더십을 균형 있게 발전</li>
+          <li>데이터를 해석하고 의사결정에 활용하는 역량 강화</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>
